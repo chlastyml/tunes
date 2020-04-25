@@ -27,6 +27,11 @@ const TunesSong: React.FC<Props> = (props) => {
 		[song.artist, song.title]
 	)
 
+	// add new song
+	const addSongHandler = () => {
+		console.log('Pridan song: ' + song.artist + ' - ' + song.title)
+	}
+
 	// template
 	return (
 		<article className="song">
@@ -39,7 +44,10 @@ const TunesSong: React.FC<Props> = (props) => {
 				</div>
 			</div>
 
-			<footer className="meta">{shorten(song.album)}</footer>
+			<footer className="meta">
+				<span className="meta-album">{shorten(song.album)}</span>
+				<span className="btn add-song-btn" onClick={() => addSongHandler()}>Pridat</span>
+			</footer>
 		</article>
 	)
 }

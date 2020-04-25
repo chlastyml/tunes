@@ -56,11 +56,29 @@
 		line-height: 1.5;
 		color: rgba(255, 255, 255, 0.9);
 
-		padding: 1.5em 2.25em;
 		background: rgba(0, 0, 0, 0.9);
 
 		border-bottom-left-radius: 1em;
 		border-bottom-right-radius: 1em;
+
+		position: relative;
+		overflow:auto;
+	}
+}
+
+.meta-album {
+	float: left;
+	padding: 1.5em 2.25em;
+}
+
+.add-song-btn {
+	padding: 1.5em 2.25em;
+	float: right;
+	border-bottom-right-radius: 1em;
+	user-select: none;
+
+	&:hover {
+		background: lighten(rgba(0, 0, 0, 0.9), 20);
 	}
 }
 
