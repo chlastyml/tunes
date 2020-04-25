@@ -4,6 +4,9 @@ import './assets/App.scss'
 import { Route, Switch } from 'react-router-dom'
 import { useCookies } from 'react-cookie'
 
+// types
+import { Page } from './types/Page'
+
 // Components
 import TheNavigation from './components/TheNavigation'
 
@@ -11,6 +14,7 @@ import TheNavigation from './components/TheNavigation'
 import Home from './views/Home'
 import Tunes from './views/Tunes'
 import About from './views/About'
+import Login from './views/Login'
 
 function App() {
 	const [cookies, setCookie] = useCookies(['count'])
@@ -30,16 +34,44 @@ function App() {
 		}
 	}, [cookies, setCookie])
 
+	const pages: Page[] = [
+		{
+			path: '/',
+			component: Home,
+			title: 'Home',
+			exact: true,
+		},
+		{
+			path: '/tunes',
+			component: Tunes,
+			title: 'Tunes',
+		},
+		{
+			path: '/about',
+			component: About,
+			title: 'About',
+		},
+		{
+			path: '/login',
+			component: Login,
+			title: 'Login',
+		},
+	]
+
 	return (
 		<div onClick={() => countHandler()} className="App App-header">
 			<header>
-				<TheNavigation />
+				<TheNavigation pages={pages} />
 			</header>
 			<main className="content">
 				<Switch>
-					<Route path="/" component={Home} exact />
+					{pages.map((page) => (
+						<Route path={page.path} component={page.component} exact={page.exact} />
+					))}
+					{/* <Route path="/" component={Home} exact={true} />
 					<Route path="/tunes" component={Tunes} />
 					<Route path="/about" component={About} />
+					<Route path="/login" component={Login} /> */}
 				</Switch>
 			</main>
 			<footer className="footer">

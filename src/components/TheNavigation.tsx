@@ -1,21 +1,27 @@
-import React, { ReactElement } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
+
+// types
+import { Page } from '../types/Page'
 
 // styles
 import styles from './TheNavigation.module.scss'
 
-export default function TheNavigation(): ReactElement {
+// props
+interface Props {
+	pages: Page[]
+}
+
+// component
+const TheNavigation: React.FC<Props> = ({ pages }) => {
+	// template
 	return (
 		<nav className={styles.navigation}>
-			<NavLink activeClassName={styles.active} to="/" exact>
-				Home
-			</NavLink>
-			<NavLink activeClassName={styles.active} to="/tunes">
-				Tunes
-			</NavLink>
-			<NavLink activeClassName={styles.active} to="/about">
-				About
-			</NavLink>
+			{pages.map((page, index) => (
+				<NavLink key={index} activeClassName={styles.active} to={page.path} exact>{page.title}</NavLink>
+			))}
 		</nav>
 	)
 }
+
+export default TheNavigation
