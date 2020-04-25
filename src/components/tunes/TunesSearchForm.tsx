@@ -1,4 +1,4 @@
-import React, { FormEvent, ChangeEvent, useRef } from 'react'
+import React, { FormEvent, useRef } from 'react'
 import { debounce } from 'lodash-es'
 
 // styles
@@ -9,8 +9,7 @@ interface Props {
 	onSearch: (query: string) => void
 }
 
-const TunesSearchForm: React.FC<Props> = (props) => {
-	const { onSearch } = props
+const TunesSearchForm: React.FC<Props> = ({ onSearch }) => {
 	const searchInput = useRef<HTMLInputElement>(null)
 
 	// submit form
@@ -20,7 +19,7 @@ const TunesSearchForm: React.FC<Props> = (props) => {
 	}
 
 	// input element
-	const handleInput = debounce((e: ChangeEvent<HTMLInputElement>) => {
+	const handleInput = debounce(() => {
 		searchForMusic()
 	}, 500)
 
