@@ -1,4 +1,4 @@
-import { FunctionComponent } from 'react'
+import React from 'react'
 
 // export class Page {
 // 	public path: string
@@ -17,7 +17,7 @@ import { FunctionComponent } from 'react'
 
 export interface Page {
 	path: string
-	component: FunctionComponent
+	component: React.FC<{}> | React.FC<any> | React.ComponentClass<any, any>
 	title: string
 	exact?: boolean
 }

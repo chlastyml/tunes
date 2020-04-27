@@ -13,15 +13,18 @@ import TheNavigation from './components/TheNavigation'
 // Views
 import Home from './views/Home'
 import Tunes from './views/Tunes'
+import Guess from './views/Guess'
 import About from './views/About'
-import Login from './views/Login'
+import Login from './views/Login/Login'
+import Registration from './views/Login/Registration'
+import Forgotpassword from './views/Login/Forgotpassword'
 
 function App() {
 	const [cookies, setCookie] = useCookies(['count'])
 
 	const setCookieCount = (val: number) => {
 		setCookie('count', val, { path: '/', sameSite: true })
-		console.log('set new cookies.count', val)
+		// console.log('set new cookies.count', val)
 	}
 
 	const countHandler = () => {
@@ -47,6 +50,12 @@ function App() {
 			title: 'Tunes',
 		},
 		{
+			path: '/guess/:id',
+			component: Guess,
+			title: 'Guess',
+			exact: false,
+		},
+		{
 			path: '/about',
 			component: About,
 			title: 'About',
@@ -65,13 +74,23 @@ function App() {
 			</header>
 			<main className="content">
 				<Switch>
-					{pages.map((page) => (
-						<Route path={page.path} component={page.component} exact={page.exact} />
+					{pages.map((page, index) => (
+						<Route
+							key={index}
+							path={page.path}
+							component={page.component}
+							exact={page.exact}
+						/>
 					))}
-					{/* <Route path="/" component={Home} exact={true} />
+					{/* <Route path="/" component={Home} exact />
 					<Route path="/tunes" component={Tunes} />
+					<Route path="/guess/:id" component={Guess} />
 					<Route path="/about" component={About} />
 					<Route path="/login" component={Login} /> */}
+
+					<Route path="/registration" component={Registration} />
+					<Route path="/forgotpassword" component={Forgotpassword} />
+					<Route render={() => <h1>Error 404</h1>} />
 				</Switch>
 			</main>
 			<footer className="footer">

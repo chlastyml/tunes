@@ -21,15 +21,18 @@ const TunesList: React.FC<Props> = (props) => {
 
 	// template
 	return (
-		<TransitionGroup component="ul" className="tunes-list">
-			{songs.map((song) => (
-				<CSSTransition key={song.id} timeout={200} classNames="song">
-					<li key={song.id}>
-						<TunesSong song={song} />
-					</li>
-				</CSSTransition>
-			))}
-		</TransitionGroup>
+		<div>
+			<TransitionGroup component="ul" className="tunes-list">
+				{songs.map((song) => (
+					<CSSTransition key={song.externId} timeout={200} classNames="song">
+						<li key={song.externId}>
+							<TunesSong song={song} />
+						</li>
+					</CSSTransition>
+				))}
+			</TransitionGroup>
+			<h1 style={{ display: songs.length !== 0 ? 'none' : 'inline' }}>NOT FOUND</h1>
+		</div>
 	)
 }
 

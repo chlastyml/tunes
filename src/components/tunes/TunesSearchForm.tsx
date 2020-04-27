@@ -36,6 +36,7 @@ const TunesSearchForm: React.FC<Props> = ({ onSearch }) => {
 				<input
 					className="search"
 					ref={searchInput}
+					placeholder="try write artist or song"
 					type="text"
 					onChange={handleInput}
 					autoFocus

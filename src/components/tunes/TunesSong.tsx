@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react'
 import { truncate } from 'lodash-es'
+import axios from 'axios'
 
 // styles
 import './TunesSong.scss'
@@ -29,7 +30,12 @@ const TunesSong: React.FC<Props> = (props) => {
 
 	// add new song
 	const addSongHandler = () => {
-		console.log('Pridan song: ' + song.artist + ' - ' + song.title)
+		axios
+			.post('http://localhost:3001/api/song/add', song, { withCredentials: true })
+			// .then((res) => {
+			// 	console.log('res :>> ', res.data)
+			// })
+			.catch((err) => console.error(err))
 	}
 
 	// template
@@ -46,7 +52,9 @@ const TunesSong: React.FC<Props> = (props) => {
 
 			<footer className="meta">
 				<span className="meta-album">{shorten(song.album)}</span>
-				<span className="btn add-song-btn" onClick={() => addSongHandler()}>Pridat</span>
+				<span className="btn add-song-btn" onClick={() => addSongHandler()}>
+					Pridat
+				</span>
 			</footer>
 		</article>
 	)

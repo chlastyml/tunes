@@ -1,0 +1,73 @@
+.login-form {
+	font-size: 1.15em;
+	font-weight: 600;
+}
+
+.login-info {
+	font-size: .85em;
+	font-weight: 400;
+}
+
+/* Full-width inputs */
+.login-input {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	border-radius: 0.5em;
+	font-size: .75em;
+	font-weight: 500;
+	font-family: 'Nunito Sans', helvetica, arial, sans-serif;
+
+	&:focus {
+        border: 1px solid rgba($color: #61dafb, $alpha: 1.0);
+        box-shadow: 0 0 5pt 2pt rgba($color: #61dafb, $alpha: 1.0);
+	}
+}
+
+/* Set a style for all buttons */
+.btn-login {
+	background-color: darken($color: #61dafb, $amount: 30);
+	color: white;
+	padding: 14px 20px;
+	margin: 1em 0;
+	border: none;
+	border-radius: 0.5em;
+	cursor: pointer;
+	width: 100%;
+	font-size: .85em;
+	font-weight: 600;
+	font-family: 'Nunito Sans', helvetica, arial, sans-serif;
+
+	/* Add a hover effect for buttons */
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+	text-align: center;
+	margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+	width: 40%;
+	border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+	padding: 16px;
+}
+
+.registration {
+	text-decoration: underline;
+	cursor: pointer;
+	&:hover {
+		opacity: 0.8;
+	}
+}

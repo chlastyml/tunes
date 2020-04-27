@@ -36,14 +36,15 @@ export default function Tunes(): ReactElement {
 	}
 
 	const extractData = ({
-		trackId: id,
+		trackId: extern_id,
 		trackName: title,
 		artistName: artist,
 		previewUrl: audioFile,
 		artworkUrl100: artwork,
 		collectionName: album,
 	}: SongFromITunes) => {
-		return { id, title, artist, audioFile, artwork, album } as Song
+		const song = { externId: extern_id, title, artist, audioFile, artwork, album } as Song
+		return song
 	}
 
 	// template
