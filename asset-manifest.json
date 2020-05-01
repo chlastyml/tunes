@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/tunes/static/css/main.5400e686.chunk.css",
-    "main.js": "/tunes/static/js/main.c9ab2a6f.chunk.js",
-    "main.js.map": "/tunes/static/js/main.c9ab2a6f.chunk.js.map",
+    "main.js": "/tunes/static/js/main.5f908b65.chunk.js",
+    "main.js.map": "/tunes/static/js/main.5f908b65.chunk.js.map",
     "runtime-main.js": "/tunes/static/js/runtime-main.f667c14d.js",
     "runtime-main.js.map": "/tunes/static/js/runtime-main.f667c14d.js.map",
-    "static/js/2.a9395397.chunk.js": "/tunes/static/js/2.a9395397.chunk.js",
-    "static/js/2.a9395397.chunk.js.map": "/tunes/static/js/2.a9395397.chunk.js.map",
+    "static/js/2.12d0271b.chunk.js": "/tunes/static/js/2.12d0271b.chunk.js",
+    "static/js/2.12d0271b.chunk.js.map": "/tunes/static/js/2.12d0271b.chunk.js.map",
     "index.html": "/tunes/index.html",
-    "precache-manifest.6f10ae952a579eb510a3161a6d820060.js": "/tunes/precache-manifest.6f10ae952a579eb510a3161a6d820060.js",
+    "precache-manifest.b759e5d8fb3234dba264962475427522.js": "/tunes/precache-manifest.b759e5d8fb3234dba264962475427522.js",
     "service-worker.js": "/tunes/service-worker.js",
     "static/css/main.5400e686.chunk.css.map": "/tunes/static/css/main.5400e686.chunk.css.map",
-    "static/js/2.a9395397.chunk.js.LICENSE.txt": "/tunes/static/js/2.a9395397.chunk.js.LICENSE.txt",
+    "static/js/2.12d0271b.chunk.js.LICENSE.txt": "/tunes/static/js/2.12d0271b.chunk.js.LICENSE.txt",
     "static/media/logo.svg": "/tunes/static/media/logo.5d5d9eef.svg",
     "static/media/TunesSearchForm.scss": "/tunes/static/media/search.4aa3e445.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.f667c14d.js",
-    "static/js/2.a9395397.chunk.js",
+    "static/js/2.12d0271b.chunk.js",
     "static/css/main.5400e686.chunk.css",
-    "static/js/main.c9ab2a6f.chunk.js"
+    "static/js/main.5f908b65.chunk.js"
   ]
 }
