@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, useState } from 'react'
 import { truncate } from 'lodash-es'
 import axios from 'axios'
 
@@ -16,6 +16,7 @@ interface Props {
 //component
 const TunesSong: React.FC<Props> = (props) => {
 	const { song } = props
+	const [added, setAdded] = useState(true)
 
 	const shorten = (str: string, length = 55) => truncate(str, { length })
 
@@ -32,9 +33,10 @@ const TunesSong: React.FC<Props> = (props) => {
 	const addSongHandler = () => {
 		axios
 			.post('http://localhost:3001/api/song/add', song, { withCredentials: true })
-			// .then((res) => {
-			// 	console.log('res :>> ', res.data)
-			// })
+			.then((res) => {
+				console.log('res :>> ', res.data)
+				setAdded(false)
+			})
 			.catch((err) => console.error(err))
 	}
 
@@ -52,9 +54,11 @@ const TunesSong: React.FC<Props> = (props) => {
 
 			<footer className="meta">
 				<span className="meta-album">{shorten(song.album)}</span>
-				<span className="btn add-song-btn" onClick={() => addSongHandler()}>
-					Pridat
-				</span>
+				{added && (
+					<span className="btn add-song-btn" onClick={() => addSongHandler()}>
+						Pridat
+					</span>
+				)}
 			</footer>
 		</article>
 	)

@@ -55,11 +55,11 @@ const Login: React.FC = () => {
 					</button>
 				</div>
 				<span className="login-info">
-					I am a idiot and I{' '}
+					I am an idiot and I{' '}
 					<Link className="registration" to="/forgotpassword">
 						forgot my password
 					</Link>{' '}
-					or I havn't account and I wanna to{' '}
+					or I haven't account and I wanna to{' '}
 					<Link className="registration" to="/registration">
 						registrate
 					</Link>
