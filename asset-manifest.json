@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/tunes/static/css/main.5400e686.chunk.css",
-    "main.js": "/tunes/static/js/main.bc489ff1.chunk.js",
-    "main.js.map": "/tunes/static/js/main.bc489ff1.chunk.js.map",
+    "main.js": "/tunes/static/js/main.c9ab2a6f.chunk.js",
+    "main.js.map": "/tunes/static/js/main.c9ab2a6f.chunk.js.map",
     "runtime-main.js": "/tunes/static/js/runtime-main.f667c14d.js",
     "runtime-main.js.map": "/tunes/static/js/runtime-main.f667c14d.js.map",
     "static/js/2.a9395397.chunk.js": "/tunes/static/js/2.a9395397.chunk.js",
     "static/js/2.a9395397.chunk.js.map": "/tunes/static/js/2.a9395397.chunk.js.map",
     "index.html": "/tunes/index.html",
-    "precache-manifest.dc285e5888724ce7cba5b9ef7bd03467.js": "/tunes/precache-manifest.dc285e5888724ce7cba5b9ef7bd03467.js",
+    "precache-manifest.6f10ae952a579eb510a3161a6d820060.js": "/tunes/precache-manifest.6f10ae952a579eb510a3161a6d820060.js",
     "service-worker.js": "/tunes/service-worker.js",
     "static/css/main.5400e686.chunk.css.map": "/tunes/static/css/main.5400e686.chunk.css.map",
     "static/js/2.a9395397.chunk.js.LICENSE.txt": "/tunes/static/js/2.a9395397.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.f667c14d.js",
     "static/js/2.a9395397.chunk.js",
     "static/css/main.5400e686.chunk.css",
-    "static/js/main.bc489ff1.chunk.js"
+    "static/js/main.c9ab2a6f.chunk.js"
   ]
 }
